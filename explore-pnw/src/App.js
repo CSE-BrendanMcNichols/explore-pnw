@@ -9,7 +9,7 @@ import TravelTips from './pages/TravelTips';
 
 function App() {
   return (
-      <Router basename="/explore-pnw">
+      <Router>
       <Routes>
         <Route path="/" element={<Home />} />  {/* Home route */}
         <Route path="destinations" element={<Destinations />} />
