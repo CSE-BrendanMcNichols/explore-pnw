@@ -1,0 +1,17 @@
+/* src/index.css */
+:root {
+    --background-color: #D4E9D9;
+    --text-color: #192d32;
+    --secondary-color: #9BC5BC;
+    --button-bg-color: #4a7c59;
+    --button-text-color: #ffffff;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+  }
+  

@@ -1,0 +1,90 @@
+:root {
+    --background-color: #D4E9D9;
+    --text-color: #192d32;
+    --secondary-color: #9BC5BC;
+    --button-bg-color: #4a7c59;
+    --button-text-color: #192d32;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.travel-tips {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tips-header {
+    margin-bottom: 20px;
+}
+
+.tips-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tip-card {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-info img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.user-info h3 {
+    margin: 0;
+}
+
+.footer-button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.footer-button:hover {
+    background-color: #3a6247;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .tips-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tip-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
