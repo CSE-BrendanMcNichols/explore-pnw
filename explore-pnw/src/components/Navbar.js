@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';  // Import Link
 import '../styles/Navbar.css';
 
 function Navbar({ isHomePage }) {
@@ -13,18 +14,18 @@ function Navbar({ isHomePage }) {
       <h1>Explore the Pacific Northwest</h1>
       {isHomePage && (
         <div className="auth-buttons">
-          <a href="#" className="auth-button">Login</a>
-          <a href="#" className="auth-button">Create Account</a>
+          <Link to="#" className="auth-button">Login</Link>
+          <Link to="#" className="auth-button">Create Account</Link>
         </div>
       )}
       <div className="hamburger" onClick={toggleMenu}>
         &#9776;
       </div>
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-        <li><a href="/">Home</a></li>
-        <li><a href="/destinations">Destinations</a></li>
-        <li><a href="/schedule-planner">Schedule Planner</a></li>
-        <li><a href="/travel-tips">Travel Tips</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/destinations">Destinations</Link></li>
+        <li><Link to="/schedule-planner">Schedule Planner</Link></li>
+        <li><Link to="/travel-tips">Travel Tips</Link></li>
       </ul>
     </header>
   );
