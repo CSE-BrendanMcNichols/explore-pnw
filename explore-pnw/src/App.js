@@ -11,11 +11,14 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="" element={<Home />} />  {/* Home route */}
+        <Route path="/" element={<Home />} />  {/* Home route */}
         <Route path="destinations" element={<Destinations />} />
         <Route path="space-needle" element={<SpaceNeedle />} />
         <Route path="schedule-planner" element={<SchedulePlanner />} />
         <Route path="travel-tips" element={<TravelTips />} />
+        
+        {/* Catch-all route to redirect to Home */}
+        <Route path="*" element={<Home />} />
       </Routes>
     </Router>
   );
