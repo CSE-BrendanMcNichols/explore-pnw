@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/CSE-BrendanMcNichols/explore-pnw/static/css/main.879e9ddf.css",
-    "main.js": "/CSE-BrendanMcNichols/explore-pnw/static/js/main.c39bef69.js",
-    "static/media/portland-garden.png": "/CSE-BrendanMcNichols/explore-pnw/static/media/portland-garden.3dbd055c84a161b72fb7.png",
-    "static/media/carousel-image.png": "/CSE-BrendanMcNichols/explore-pnw/static/media/carousel-image.486c7f3518e944320e2c.png",
-    "static/media/space-needle2.jpeg": "/CSE-BrendanMcNichols/explore-pnw/static/media/space-needle2.4349cb4301472a2bca21.jpeg",
-    "static/media/space-needle1.jpeg": "/CSE-BrendanMcNichols/explore-pnw/static/media/space-needle1.e1f9d8bde3793406cbc9.jpeg",
-    "static/media/mount-rainier.jpeg": "/CSE-BrendanMcNichols/explore-pnw/static/media/mount-rainier.8d107b3750a8ac202052.jpeg",
-    "static/media/avatar_2.png": "/CSE-BrendanMcNichols/explore-pnw/static/media/avatar_2.b19549a99e1b047777a5.png",
-    "static/media/avatar_3.png": "/CSE-BrendanMcNichols/explore-pnw/static/media/avatar_3.e9d931c3aef19db3c21e.png",
-    "static/media/avatar_1.png": "/CSE-BrendanMcNichols/explore-pnw/static/media/avatar_1.c6d6cca5db08dddfb974.png",
-    "static/media/avatar_7.png": "/CSE-BrendanMcNichols/explore-pnw/static/media/avatar_7.489f6ff5026de4ab3255.png",
-    "static/media/avatar_4.png": "/CSE-BrendanMcNichols/explore-pnw/static/media/avatar_4.09fa2595c439790d76c1.png",
-    "static/media/avatar_6.png": "/CSE-BrendanMcNichols/explore-pnw/static/media/avatar_6.c35f2eb30a334b970050.png",
-    "static/media/avatar_5.png": "/CSE-BrendanMcNichols/explore-pnw/static/media/avatar_5.e7d1add021673cf71f0d.png",
-    "static/media/avatar_8.png": "/CSE-BrendanMcNichols/explore-pnw/static/media/avatar_8.3dfa347b52cedeaf9409.png",
-    "static/media/leavenworth.jpeg": "/CSE-BrendanMcNichols/explore-pnw/static/media/leavenworth.16cc550386fe07b2cda2.jpeg",
-    "static/media/olmypic-park.jpeg": "/CSE-BrendanMcNichols/explore-pnw/static/media/olmypic-park.6aa8b12a69c80dc1c32f.jpeg",
-    "static/media/the-gorge.jpeg": "/CSE-BrendanMcNichols/explore-pnw/static/media/the-gorge.fb678eefcbcb6b0b09b0.jpeg",
-    "static/media/whistler.jpeg": "/CSE-BrendanMcNichols/explore-pnw/static/media/whistler.a794b32ff80ee4badb6b.jpeg",
-    "index.html": "/CSE-BrendanMcNichols/explore-pnw/index.html",
-    "main.879e9ddf.css.map": "/CSE-BrendanMcNichols/explore-pnw/static/css/main.879e9ddf.css.map",
-    "main.c39bef69.js.map": "/CSE-BrendanMcNichols/explore-pnw/static/js/main.c39bef69.js.map"
+    "main.css": "/explore-pnw/static/css/main.879e9ddf.css",
+    "main.js": "/explore-pnw/static/js/main.9e60ae3c.js",
+    "static/media/portland-garden.png": "/explore-pnw/static/media/portland-garden.3dbd055c84a161b72fb7.png",
+    "static/media/carousel-image.png": "/explore-pnw/static/media/carousel-image.486c7f3518e944320e2c.png",
+    "static/media/space-needle2.jpeg": "/explore-pnw/static/media/space-needle2.4349cb4301472a2bca21.jpeg",
+    "static/media/space-needle1.jpeg": "/explore-pnw/static/media/space-needle1.e1f9d8bde3793406cbc9.jpeg",
+    "static/media/mount-rainier.jpeg": "/explore-pnw/static/media/mount-rainier.8d107b3750a8ac202052.jpeg",
+    "static/media/avatar_2.png": "/explore-pnw/static/media/avatar_2.b19549a99e1b047777a5.png",
+    "static/media/avatar_3.png": "/explore-pnw/static/media/avatar_3.e9d931c3aef19db3c21e.png",
+    "static/media/avatar_1.png": "/explore-pnw/static/media/avatar_1.c6d6cca5db08dddfb974.png",
+    "static/media/avatar_7.png": "/explore-pnw/static/media/avatar_7.489f6ff5026de4ab3255.png",
+    "static/media/avatar_4.png": "/explore-pnw/static/media/avatar_4.09fa2595c439790d76c1.png",
+    "static/media/avatar_6.png": "/explore-pnw/static/media/avatar_6.c35f2eb30a334b970050.png",
+    "static/media/avatar_5.png": "/explore-pnw/static/media/avatar_5.e7d1add021673cf71f0d.png",
+    "static/media/avatar_8.png": "/explore-pnw/static/media/avatar_8.3dfa347b52cedeaf9409.png",
+    "static/media/leavenworth.jpeg": "/explore-pnw/static/media/leavenworth.16cc550386fe07b2cda2.jpeg",
+    "static/media/olmypic-park.jpeg": "/explore-pnw/static/media/olmypic-park.6aa8b12a69c80dc1c32f.jpeg",
+    "static/media/the-gorge.jpeg": "/explore-pnw/static/media/the-gorge.fb678eefcbcb6b0b09b0.jpeg",
+    "static/media/whistler.jpeg": "/explore-pnw/static/media/whistler.a794b32ff80ee4badb6b.jpeg",
+    "index.html": "/explore-pnw/index.html",
+    "main.879e9ddf.css.map": "/explore-pnw/static/css/main.879e9ddf.css.map",
+    "main.9e60ae3c.js.map": "/explore-pnw/static/js/main.9e60ae3c.js.map"
   },
   "entrypoints": [
     "static/css/main.879e9ddf.css",
-    "static/js/main.c39bef69.js"
+    "static/js/main.9e60ae3c.js"
   ]
 }
