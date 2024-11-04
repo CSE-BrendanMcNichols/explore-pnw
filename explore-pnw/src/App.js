@@ -17,8 +17,6 @@ function App() {
         <Route path="schedule-planner" element={<SchedulePlanner />} />
         <Route path="travel-tips" element={<TravelTips />} />
         
-        {/* Catch-all route to redirect to Home */}
-        <Route path="*" element={<Home />} />
       </Routes>
     </Router>
   );
