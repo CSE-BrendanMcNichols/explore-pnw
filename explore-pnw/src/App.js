@@ -1,5 +1,6 @@
+// src/App.js
 import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Destinations from './pages/Destinations';
 import SpaceNeedle from './pages/SpaceNeedle';
