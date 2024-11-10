@@ -1,12 +1,10 @@
 {
   "files": {
-    "main.css": "/explore-pnw/static/css/main.879fe699.css",
-    "main.js": "/explore-pnw/static/js/main.40c74279.js",
-    "static/media/portland-garden.png": "/explore-pnw/static/media/portland-garden.3dbd055c84a161b72fb7.png",
+    "main.css": "/explore-pnw/static/css/main.d660597e.css",
+    "main.js": "/explore-pnw/static/js/main.5514c50b.js",
     "static/media/carousel-image.png": "/explore-pnw/static/media/carousel-image.486c7f3518e944320e2c.png",
     "static/media/space-needle2.jpeg": "/explore-pnw/static/media/space-needle2.4349cb4301472a2bca21.jpeg",
     "static/media/space-needle1.jpeg": "/explore-pnw/static/media/space-needle1.e1f9d8bde3793406cbc9.jpeg",
-    "static/media/mount-rainier.jpeg": "/explore-pnw/static/media/mount-rainier.8d107b3750a8ac202052.jpeg",
     "static/media/avatar_2.png": "/explore-pnw/static/media/avatar_2.b19549a99e1b047777a5.png",
     "static/media/avatar_3.png": "/explore-pnw/static/media/avatar_3.e9d931c3aef19db3c21e.png",
     "static/media/avatar_1.png": "/explore-pnw/static/media/avatar_1.c6d6cca5db08dddfb974.png",
@@ -15,16 +13,12 @@
     "static/media/avatar_6.png": "/explore-pnw/static/media/avatar_6.c35f2eb30a334b970050.png",
     "static/media/avatar_5.png": "/explore-pnw/static/media/avatar_5.e7d1add021673cf71f0d.png",
     "static/media/avatar_8.png": "/explore-pnw/static/media/avatar_8.3dfa347b52cedeaf9409.png",
-    "static/media/leavenworth.jpeg": "/explore-pnw/static/media/leavenworth.16cc550386fe07b2cda2.jpeg",
-    "static/media/olmypic-park.jpeg": "/explore-pnw/static/media/olmypic-park.6aa8b12a69c80dc1c32f.jpeg",
-    "static/media/the-gorge.jpeg": "/explore-pnw/static/media/the-gorge.fb678eefcbcb6b0b09b0.jpeg",
-    "static/media/whistler.jpeg": "/explore-pnw/static/media/whistler.a794b32ff80ee4badb6b.jpeg",
     "index.html": "/explore-pnw/index.html",
-    "main.879fe699.css.map": "/explore-pnw/static/css/main.879fe699.css.map",
-    "main.40c74279.js.map": "/explore-pnw/static/js/main.40c74279.js.map"
+    "main.d660597e.css.map": "/explore-pnw/static/css/main.d660597e.css.map",
+    "main.5514c50b.js.map": "/explore-pnw/static/js/main.5514c50b.js.map"
   },
   "entrypoints": [
-    "static/css/main.879fe699.css",
-    "static/js/main.40c74279.js"
+    "static/css/main.d660597e.css",
+    "static/js/main.5514c50b.js"
   ]
 }
