@@ -89,7 +89,7 @@
         align-items: center;
         gap: 15px;
         width: 100%;
-        max-width: 100%; /* Allow full width on mobile */
+        max-width: 100%;
     }
 
     .image-item img {
