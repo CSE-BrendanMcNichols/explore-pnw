@@ -17,7 +17,7 @@ function SchedulePlanner() {
   const [schedule, setSchedule] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/schedule')
+    fetch('https://explore-pnw-api.onrender.com/api/schedule')
       .then((res) => res.json())
       .then((data) => setSchedule(data))
       .catch((err) => console.error('Error fetching schedule:', err));
@@ -40,7 +40,7 @@ function SchedulePlanner() {
     const formattedTime = convertTo12HourFormat(formData.time);
 
     try {
-      const response = await fetch('http://localhost:3000/api/schedule', {
+      const response = await fetch('https://explore-pnw-api.onrender.com/api/schedule', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData, time: formattedTime }),
