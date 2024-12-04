@@ -50,11 +50,11 @@ function SchedulePlanner() {
   };
 
   const handleEdit = (item) => {
-    setEditingId(item.id);
+    setEditingId(item._id);
     setFormData({
       destination: item.destination,
       date: item.date,
-      time: item.time.split(' ')[0], // Convert back to 24-hour format for input
+      time: item.time.split(' ')[0],
     });
   };
 
@@ -65,7 +65,7 @@ function SchedulePlanner() {
       });
 
       if (response.ok) {
-        setSchedule(schedule.filter(item => item.id !== id));
+        setSchedule(schedule.filter(item => item._id !== id));
         setSuccess('Schedule deleted successfully!');
         setTimeout(() => setSuccess(''), 3000);
       } else {
@@ -102,7 +102,7 @@ function SchedulePlanner() {
       if (response.ok) {
         if (editingId) {
           setSchedule(schedule.map(item => 
-            item.id === editingId ? { ...result.data, id: editingId } : item
+            item._id === editingId ? result.data : item
           ));
           setSuccess('Schedule updated successfully!');
           setEditingId(null);
@@ -192,7 +192,7 @@ function SchedulePlanner() {
             </thead>
             <tbody>
               {schedule.map((item) => (
-                <tr key={item.id}>
+                <tr key={item._id}>
                   <td>{item.date}</td>
                   <td>{item.time}</td>
                   <td>{item.destination}</td>
@@ -200,7 +200,7 @@ function SchedulePlanner() {
                     <button onClick={() => handleEdit(item)} className="action-button edit">
                       Edit
                     </button>
-                    <button onClick={() => handleDelete(item.id)} className="action-button delete">
+                    <button onClick={() => handleDelete(item._id)} className="action-button delete">
                       Delete
                     </button>
                   </td>
