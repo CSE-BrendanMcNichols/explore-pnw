@@ -25,7 +25,10 @@ function SchedulePlanner() {
     fetch('https://explore-pnw-api.onrender.com/api/schedule')
       .then((res) => res.json())
       .then((data) => setSchedule(data))
-      .catch((err) => console.error('Error fetching schedule:', err));
+      .catch((err) => {
+        console.error('Error fetching schedule:', err);
+        setError('Failed to fetch schedule. Please try again.');
+      });
   };
 
   const validateForm = () => {
@@ -54,18 +57,25 @@ function SchedulePlanner() {
     setFormData({
       destination: item.destination,
       date: item.date,
-      time: item.time.split(' ')[0],
+      time: item.time.split(' ')[0], // Convert back to 24-hour format for input
     });
+    setError('');
+    setSuccess('');
   };
 
   const handleDelete = async (id) => {
+    if (!id) {
+      setError('Invalid schedule ID');
+      return;
+    }
+
     try {
       const response = await fetch(`https://explore-pnw-api.onrender.com/api/schedule/${id}`, {
         method: 'DELETE',
       });
 
       if (response.ok) {
-        setSchedule(schedule.filter(item => item._id !== id));
+        fetchSchedule();
         setSuccess('Schedule deleted successfully!');
         setTimeout(() => setSuccess(''), 3000);
       } else {
@@ -73,7 +83,7 @@ function SchedulePlanner() {
         setError(result.message);
       }
     } catch (err) {
-      setError('Error deleting schedule');
+      setError('Error deleting schedule. Please try again.');
     }
   };
 
@@ -94,23 +104,20 @@ function SchedulePlanner() {
       const response = await fetch(url, {
         method,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, time: formattedTime }),
+        body: JSON.stringify({
+          destination: formData.destination,
+          date: formData.date,
+          time: formattedTime
+        }),
       });
 
       const result = await response.json();
 
       if (response.ok) {
-        if (editingId) {
-          setSchedule(schedule.map(item => 
-            item._id === editingId ? result.data : item
-          ));
-          setSuccess('Schedule updated successfully!');
-          setEditingId(null);
-        } else {
-          setSchedule([...schedule, result.data]);
-          setSuccess('Schedule added successfully!');
-        }
+        fetchSchedule();
+        setSuccess(editingId ? 'Schedule updated successfully!' : 'Schedule added successfully!');
         setFormData({ destination: '', date: '', time: '' });
+        setEditingId(null);
         setTimeout(() => setSuccess(''), 3000);
       } else {
         setError(result.message);
@@ -169,6 +176,8 @@ function SchedulePlanner() {
                 onClick={() => {
                   setEditingId(null);
                   setFormData({ destination: '', date: '', time: '' });
+                  setError('');
+                  setSuccess('');
                 }}
               >
                 Cancel Edit
