@@ -10,6 +10,20 @@ function convertTo12HourFormat(time24) {
   return `${hours12}:${minutes} ${ampm}`;
 }
 
+function convertTo24HourFormat(time12) {
+  const [time, period] = time12.split(' ');
+  const [hours, minutes] = time.split(':');
+  let hours24 = parseInt(hours);
+  
+  if (period === 'PM' && hours24 !== 12) {
+    hours24 += 12;
+  } else if (period === 'AM' && hours24 === 12) {
+    hours24 = 0;
+  }
+  
+  return `${hours24.toString().padStart(2, '0')}:${minutes}`;
+}
+
 function SchedulePlanner() {
   const [formData, setFormData] = useState({ destination: '', date: '', time: '' });
   const [editingId, setEditingId] = useState(null);
@@ -21,14 +35,15 @@ function SchedulePlanner() {
     fetchSchedule();
   }, []);
 
-  const fetchSchedule = () => {
-    fetch('https://explore-pnw-api.onrender.com/api/schedule')
-      .then((res) => res.json())
-      .then((data) => setSchedule(data))
-      .catch((err) => {
-        console.error('Error fetching schedule:', err);
-        setError('Failed to fetch schedule. Please try again.');
-      });
+  const fetchSchedule = async () => {
+    try {
+      const response = await fetch('https://explore-pnw-api.onrender.com/api/schedule');
+      const data = await response.json();
+      setSchedule(data);
+    } catch (err) {
+      console.error('Error fetching schedule:', err);
+      setError('Failed to fetch schedule. Please try again.');
+    }
   };
 
   const validateForm = () => {
@@ -53,11 +68,14 @@ function SchedulePlanner() {
   };
 
   const handleEdit = (item) => {
+    // Convert the 12-hour time format back to 24-hour for the input
+    const time24 = convertTo24HourFormat(item.time);
+    
     setEditingId(item._id);
     setFormData({
       destination: item.destination,
       date: item.date,
-      time: item.time.split(' ')[0], // Convert back to 24-hour format for input
+      time: time24
     });
     setError('');
     setSuccess('');
@@ -72,15 +90,18 @@ function SchedulePlanner() {
     try {
       const response = await fetch(`https://explore-pnw-api.onrender.com/api/schedule/${id}`, {
         method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
       });
 
       if (response.ok) {
-        fetchSchedule();
+        await fetchSchedule(); // Refresh the schedule
         setSuccess('Schedule deleted successfully!');
         setTimeout(() => setSuccess(''), 3000);
       } else {
         const result = await response.json();
-        setError(result.message);
+        setError(result.message || 'Error deleting schedule');
       }
     } catch (err) {
       setError('Error deleting schedule. Please try again.');
@@ -103,7 +124,9 @@ function SchedulePlanner() {
     try {
       const response = await fetch(url, {
         method,
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({
           destination: formData.destination,
           date: formData.date,
@@ -114,19 +137,20 @@ function SchedulePlanner() {
       const result = await response.json();
 
       if (response.ok) {
-        fetchSchedule();
+        await fetchSchedule(); // Refresh the schedule
         setSuccess(editingId ? 'Schedule updated successfully!' : 'Schedule added successfully!');
         setFormData({ destination: '', date: '', time: '' });
         setEditingId(null);
         setTimeout(() => setSuccess(''), 3000);
       } else {
-        setError(result.message);
+        setError(result.message || 'Error saving schedule');
       }
     } catch (err) {
       setError('Something went wrong. Please try again.');
     }
   };
 
+  // Rest of the component remains the same...
   return (
     <div className="schedule-planner-page">
       <Navbar isHomePage={false} />
