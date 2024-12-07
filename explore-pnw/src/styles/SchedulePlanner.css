@@ -1,109 +1,124 @@
 .schedule-planner-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #e6f2ea;
-  }
-  
-  .planner-content {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 20px;
-    max-width: 1000px;
-    width: 100%;
-  }
-  
-  .planner-form, .schedule-table {
-    background-color: #b3d7c2;
-    padding: 20px;
-    border-radius: 8px;
-    width: 45%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .planner-form h2, .schedule-table h2 {
-    font-size: 1.5em;
-    color: #2f4f4f;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    font-size: 0.9em;
-    color: #2f4f4f;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #8db596;
-    border-radius: 5px;
-    font-size: 0.9em;
-  }
-  
-  .planner-button {
-    background-color: #4a7856;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1em;
-  }
-  
-  .planner-button:hover {
-    background-color: #366a44;
-  }
-  
-  .schedule-table table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9em;
-  }
-  
-  .schedule-table th, .schedule-table td {
-    padding: 10px;
-    text-align: center;
-    color: #2f4f4f;
-  }
-  
-  .schedule-table th {
-    background-color: #8db596;
-    font-weight: bold;
-  }
-  
-  .schedule-table tr:nth-child(even) {
-    background-color: #d4e6db;
-  }
-  
-  .schedule-table tr:nth-child(odd) {
-    background-color: #ffffff;
-  }
-  
-  .schedule-planner-page > footer {
-    margin-top: auto;
-    width: 100%;
-  }
-  
-    @media (max-width: 768px) {
-        .planner-content {
-        flex-direction: column;
-        }
-    
-        .planner-form, .schedule-table {
-        width: 100%;
-        margin-bottom: 20px;
-        }
-    }
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e6f2ea;
+}
+
+.planner-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px;
+}
+
+.planner-form, .schedule-table {
+  background-color: #b3d7c2;
+  padding: 20px;
+  border-radius: 8px;
+  width: 45%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.planner-form h2, .schedule-table h2 {
+  font-size: 1.5em;
+  color: #2f4f4f;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9em;
+  color: #2f4f4f;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #8db596;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.form-group input[type="file"] {
+  border: 1px solid #8db596;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.image-preview {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 2px solid #8db596;
+}
+
+.planner-button {
+  background-color: #4a7856;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.planner-button:hover {
+  background-color: #366a44;
+}
+
+.schedule-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.schedule-table th, .schedule-table td {
+  padding: 10px;
+  text-align: center;
+  color: #2f4f4f;
+}
+
+.schedule-table th {
+  background-color: #8db596;
+  font-weight: bold;
+}
+
+.schedule-table tr:nth-child(even) {
+  background-color: #d4e6db;
+}
+
+.schedule-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.schedule-table .schedule-image img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #8db596;
+}
+
 .action-button {
   padding: 5px 10px;
   margin: 0 5px;
@@ -111,6 +126,7 @@
   border-radius: 3px;
   cursor: pointer;
   font-size: 0.8em;
+  transition: opacity 0.3s ease;
 }
 
 .action-button.edit {
@@ -136,10 +152,27 @@
   color: #28a745;
   text-align: center;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 .error-message {
   color: #dc3545;
   text-align: center;
   margin-top: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .planner-content {
+      flex-direction: column;
+  }
+
+  .planner-form, .schedule-table {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .schedule-table {
+      overflow-x: auto;
+  }
 }
