@@ -1,22 +1,22 @@
 .footer {
-  background-color: #4a7856;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   font-size: 1.0em;
+  position: relative;
+  bottom: 0;
   width: 100%;
-  margin-top: auto;
 }
 
 .go-back-button {
-  background-color: #366a44;
-  color: white;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
   border: none;
   padding: 10px 20px;
   font-size: 1em;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
 .go-back-button:hover {
