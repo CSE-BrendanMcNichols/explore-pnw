@@ -1,25 +1,24 @@
 .footer {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: 20px;
-    font-size: 1.0em;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .go-back-button {
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .go-back-button:hover {
-    background-color: #3a6247;
-  }
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+  font-size: 1.0em;
+  width: 100%;
+  margin-top: auto;
+}
+
+.go-back-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.go-back-button:hover {
+  background-color: #3a6247;
+}
   
