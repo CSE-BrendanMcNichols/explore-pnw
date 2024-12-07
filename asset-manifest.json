@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/explore-pnw/static/css/main.a8404e04.css",
+    "main.css": "/explore-pnw/static/css/main.84f6dd2b.css",
     "main.js": "/explore-pnw/static/js/main.d003be1d.js",
     "static/media/carousel-image.png": "/explore-pnw/static/media/carousel-image.486c7f3518e944320e2c.png",
     "static/media/space-needle2.jpeg": "/explore-pnw/static/media/space-needle2.4349cb4301472a2bca21.jpeg",
@@ -14,11 +14,11 @@
     "static/media/avatar_5.png": "/explore-pnw/static/media/avatar_5.e7d1add021673cf71f0d.png",
     "static/media/avatar_8.png": "/explore-pnw/static/media/avatar_8.3dfa347b52cedeaf9409.png",
     "index.html": "/explore-pnw/index.html",
-    "main.a8404e04.css.map": "/explore-pnw/static/css/main.a8404e04.css.map",
+    "main.84f6dd2b.css.map": "/explore-pnw/static/css/main.84f6dd2b.css.map",
     "main.d003be1d.js.map": "/explore-pnw/static/js/main.d003be1d.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8404e04.css",
+    "static/css/main.84f6dd2b.css",
     "static/js/main.d003be1d.js"
   ]
 }
