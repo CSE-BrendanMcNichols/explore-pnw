@@ -5,6 +5,7 @@ import Destinations from './pages/Destinations';
 import SpaceNeedle from './pages/SpaceNeedle';
 import SchedulePlanner from './pages/SchedulePlanner';
 import TravelTips from './pages/TravelTips';
+import './styles/App.css';
 
 function App() {
   return (
