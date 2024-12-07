@@ -4,6 +4,8 @@
   align-items: center;
   min-height: 100vh;
   background-color: #e6f2ea;
+  position: relative;
+  padding-bottom: 100px;
 }
 
 .planner-content {
@@ -13,6 +15,7 @@
   max-width: 1200px;
   width: 100%;
   gap: 20px;
+  flex: 1;
 }
 
 .planner-form, .schedule-table {
@@ -162,7 +165,18 @@
   font-weight: bold;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #4a7856;
+}
+
 @media (max-width: 768px) {
+  .schedule-planner-page {
+      padding-bottom: 150px;
+  }
+
   .planner-content {
       flex-direction: column;
   }
